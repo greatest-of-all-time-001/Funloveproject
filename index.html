@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    
+    <div class="door-frame">
+           
+             <div class="bulb">
+         
+             </div>
+        
+        <div class="cloud">
+                
+                
+        </div>
+        
+         
+        <div class="cloud-2">
+                
+                
+        </div>
+        
+         
+        <div class="cloud-3">
+                
+                
+        </div>
+        
+        <div class="note">
+        <p class="message"> Just as the moon shines in the deepest darkness, you are the constant light in my life. I love you, Mama. I will always cherish every moment we spend together, both the good and bad times. Do you love me?</p>
+        <div>
+                <button class="yes">YES</button>
+                <button class="no">NO</button>
+        </div>
+        </div>
+               <div class="background">
+            <p>OPEN </p>
+            <div class="base">
+                    
+            </div>
+            
+            <div class="handle">
+                    
+            </div>
+    </div>   
+    </div>
+    
+ 
+    
+    
+   
+   
+   
+   
+   
+
+    
+    <script>
+       let handle = document.querySelector(".handle")
+       let switchButton =  document.querySelector(".background")
+       let note = document.querySelector(".note")
+       
+       let yesBtn = document.querySelector(".yes")
+       
+       let message = document.querySelector(".message")
+       let noBtn = document.querySelector(".no")
+       
+        switchButton.addEventListener('click', () => {
+                handle.classList.toggle("active")
+                switchButton.classList.toggle("active")
+                note.classList.toggle("active")
+        })    
+        
+        
+        yesBtn.addEventListener('click', function yesLove() {
+                
+                if(message.innerHTML === "oya  press yes immediately!!! stubborn child") {
+                        
+                message.innerHTML = "you de like try me ooo, but anyways! i love you too"              
+                }  else {
+                        message.innerHTML = "i love you too"   
+                }
+                
+                
+                
+        } )
+            
+        noBtn.addEventListener('click', function noLove() { 
+                
+                if (message.innerHTML === "i love you too" || message.innerHTML=== "you de like try me ooo, but anyways! i love you too") {
+                noBtn.removeEventListener('click', noLove)
+                
+                console.log('sharp')
+                        } else {
+                          message.innerHTML = "oya  press yes immediately!!! stubborn child"   
+                        }
+                
+        })
+    </script>
+</body>
+
+</html>
